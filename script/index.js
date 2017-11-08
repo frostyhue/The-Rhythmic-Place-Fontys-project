@@ -67,3 +67,4 @@ $.scrollify({
 		afterResize:function() {},
 		afterRender:function() {}
 	});
+
