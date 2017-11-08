@@ -1,5 +1,4 @@
-/*! Elastic Slider (c) 2014 // Taron Mehrabyan // Ruben Sargsyan
- */
+/*! Gallery*/
 
 window.addEventListener('load', onWndLoad, false);
 
@@ -165,3 +164,10 @@ function onWndLoad() {
 
 
 }
+
+/* about page*/
+$(function() {
+          $.scrollify({
+            section : ".about-page",
+          });
+        });

@@ -2,10 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>The Rhythmic Place</title>
-      <script src="script/jquery-3.2.1.min.js"></script>
-      <script src="script/javascript.js"></script>
       <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
-      <link href="style/style.scss" style="text/css" rel="stylesheet">
+      <link href="style/style.css" style="text/css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="font/Open_Sans.css">
       
       <meta charset="utf-8" />
@@ -46,10 +44,56 @@
                       <h1>The Rhythmic Place</h1>
                   </div>
           </div>
+          <section data-section-name="about">
           <div class="about-page" id="about">
-                  <div class="centered-heading">
-                      <h1>About</h1>
-                  </div>
+             <div class="sliders">
+  <!-- slides -->
+  <div class="sliders__slides">
+    <div class="slides s--active">
+      <div class="slides__inner">
+        <div class="slides__content">
+          <h2 class="slide__heading">Clip-Path Revealing Slider</h2>
+          <p class="slides__text">Greetings, Traveler!</p>
+        </div>
+      </div>
+    </div>
+    <div class="slides">
+      <div class="slides__inner">
+        <div class="slides__content">
+          <h2 class="slides__heading">Simple Animation</h2>
+          <p class="slides__text">Clip-path magic!</p>
+        </div>
+      </div>
+    </div>
+    <div class="slides">
+      <div class="slides__inner">
+        <div class="slides__content">
+          <h2 class="slides__heading">Very Stylish Effect!</h2>
+          <p class="slides__text">It looks cool, isn't it?</p>
+        </div>
+      </div>
+    </div>
+    <div class="slides s--prev">
+      <div class="slides__inner">
+        <div class="slides__content">
+          <h2 class="slides__heading">Dummy Heading!</h2>
+          <p class="slides__text">Dummy infor and</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slides end -->
+  <div class="sliders__control">
+    <div class="sliders__control-line"></div>
+    <div class="sliders__control-line"></div>
+  </div>
+  <div class="sliders__control sliders__control--right m--right">
+    <div class="sliders__control-line"></div>
+    <div class="sliders__control-line"></div>
+  </div>
+</div>
+</div>
+          </section>
           </div>
           <div class="gallery-page" id="gallery">
               
@@ -71,24 +115,12 @@
           </div>
           <div class="map-page" id="map">
           </div>
-      </div>
-<!--      </div>-->
           <footer id="footer">
               <div class="center-top"></div>
           </footer>
-      <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/59fd10cbbb0c3f433d4c700a/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+<script src="script/index.js">
+      <script src="script/jquery-3.2.1.min.js"></script>
+      <script src="script/javascript.js"></script>
+      </script>>
   </body>
-    
 </html>
