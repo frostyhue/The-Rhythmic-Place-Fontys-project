@@ -193,7 +193,6 @@ line-height: 20px;
     margin-left: -40px;
 }
 .home-page{
-    width: 100vw;
     height: 100vh;
     margin: 0px;
     position: relative;
@@ -203,7 +202,6 @@ line-height: 20px;
     background-attachment: fixed;
 }
 .join-page{
-    width: 100vw;
     height: 100vh;
     margin: 0px;
     position: relative;
@@ -213,7 +211,6 @@ line-height: 20px;
     background-attachment: fixed;
 }
 .map-page{
-    width: 100vw;
     height: 100vh;
     margin: 0px;
     position: relative;
@@ -223,14 +220,12 @@ line-height: 20px;
     background-attachment: fixed;
 }
 .about-page{
-        width: 100vw;
     height: 100vh;
     margin: 0px;
     position: relative;
   overflow: hidden;
 }
 .gallery-page{
-        width: 100vw;
     height: 100vh;
     margin: 0px;
     position: relative;
@@ -465,7 +460,6 @@ $controlSize: 60px;
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 100vw;
     height: 100vh;
     margin-left: -50vw;
     margin-top: -50vh;

@@ -166,8 +166,118 @@ function onWndLoad() {
 }
 
 /* about page*/
-$(function() {
-          $.scrollify({
-            section : ".about-page",
-          });
-        });
+
+(function() {
+  var $slides = document.querySelectorAll('.slides');
+  var $controls = document.querySelectorAll('.sliders__control');
+  var numOfSlides = $slides.length;
+  var slidingAT = 1300; // sync this with scss variable
+  var slidingBlocked = false;
+
+  [].slice.call($slides).forEach(function($el, index) {
+    var i = index + 1;
+    $el.classList.add('slides-' + i);
+    $el.dataset.slide = i;
+  });
+
+  [].slice.call($controls).forEach(function($el) {
+    $el.addEventListener('click', controlClickHandler);
+  });
+
+  function controlClickHandler() {
+    if (slidingBlocked) return;
+    slidingBlocked = true;
+
+    var $control = this;
+    var isRight = $control.classList.contains('m--right');
+    var $curActive = document.querySelector('.slides.s--active');
+    var index = +$curActive.dataset.slide;
+    (isRight) ? index++ : index--;
+    if (index < 1) index = numOfSlides;
+    if (index > numOfSlides) index = 1;
+    var $newActive = document.querySelector('.slides-' + index);
+
+    $control.classList.add('a--rotation');
+    $curActive.classList.remove('s--active', 's--active-prev');
+    document.querySelector('.slides.s--prev').classList.remove('s--prev');
+    
+    $newActive.classList.add('s--active');
+    if (!isRight) $newActive.classList.add('s--active-prev');
+    
+
+    var prevIndex = index - 1;
+    if (prevIndex < 1) prevIndex = numOfSlides;
+
+    document.querySelector('.slides-' + prevIndex).classList.add('s--prev');
+
+    setTimeout(function() {
+      $control.classList.remove('a--rotation');
+      slidingBlocked = false;
+    }, slidingAT*0.75);
+  };
+}());
+
+/*footer*/
+$(function () {
+    var iframe = $('.main-content iframe')[0],
+        menu_links = $('.items li a'),
+        selected_link,
+        href;
+
+
+    $(window).on('hashchange', function() {
+
+        if(window.location.hash){
+            href = window.location.hash.substring(1);
+            selected_link = $('a[href$="'+href+'"]');
+
+            // Check if the hash is valid - it should exist as one of the menu items.
+            if(selected_link.length){
+                iframe.contentWindow.location.replace(href + '.html');
+
+                menu_links.removeClass('active');
+                selected_link.addClass('active');
+            }
+        }
+        else{
+            iframe.contentWindow.location.replace('Footer-with-logo.html');
+            menu_links.removeClass('active');
+            $(menu_links[0]).addClass('active');
+        }
+
+    });
+
+
+    if(window.location.hash){
+        $(window).trigger('hashchange');
+    }
+
+
+    menu_links.on('click', function (e) {
+        e.preventDefault();
+
+        window.location.hash = $(this).attr('href');
+    });
+
+
+    $('#template-select').on('change', function (e) {
+        e.preventDefault();
+
+        window.location.hash = $(this).find(':selected').data('href');
+    });
+
+});
+
+/*navbar darker background after scroll*/
+
+window.onscroll = function() {
+    var nav = document.getElementById('nav');
+    var right = document.getElementById('right');
+    if ( window.pageYOffset > 1 ) {
+        nav.classList.add("nav");
+        right.classList.add("padding-right");
+    } else {
+        nav.classList.remove("nav");
+        right.classList.remove("padding-right");
+    }
+}
