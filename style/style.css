@@ -58,6 +58,7 @@ body * {
   /*-webkit-transform:rotateX(45deg);
              -webkit-transform-style:preserve-3d;
                  position:absolute;*/
+    padding-top: 2.5%;
 }
 
 /*.slider:active{ -webkit-transform:rotateZ(10deg);}*/
@@ -233,7 +234,6 @@ body * {
   background-image: url(../images/4.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .map-page {
@@ -315,22 +315,48 @@ body * {
   align-items: center;
 }
 
-
-
+.centered-view{
+    height: 75%;
+    width: 92%;
+    position: relative;
+    left: 8%;
+    top: 8%;
+}
+.schedule {
+    position: relative;
+    float: left;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.schedule img{
+    flex-shrink: 0;
+    width: 60vw;
+    height: 85vh;
+}
+.centered-view .text {
+    color: white;
+    font-size: 30px;
+    margin-top: 0px;
+    overflow: hidden;
+    padding-top: 170px;
+    padding-left: 80px;
+    padding-right: 20px;
+}
+.button{
+    margin-top: 3%;
+    margin-left: 12%; 
+    color: aqua;
+    background-color: green; 
+    border: 3px; 
+    padding: 15px;
+}
 .centered-heading {
   height: 10em;
   position: relative;
 }
 
-.centered-heading h1 {
-  position: absolute;
-  margin-top: 35%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 70px;
-}
 
 .main-heading {
   height: 10em;
@@ -340,11 +366,16 @@ body * {
 .main-heading h1 {
   position: absolute;
   margin-top: 20%;
-  left: 50%;
+  left: 5%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 90px;
+}
+h1 {
+    margin: 0px 40%;
+    padding-top 5%;
+    
 }
 
 .center-top {
