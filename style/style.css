@@ -221,8 +221,8 @@ body * {
   height: 100vh;
   margin: 0px;
   position: relative;
-  background-image: url(../images/3.jpg);
-  background-size: cover;
+  background-image: url(../images/TRP.jpg);
+  background-size:auto;
   background-position: center;
   background-attachment: fixed;
 }
@@ -378,14 +378,6 @@ h1 {
     
 }
 
-.center-top {
-  background-image: url(../images/arrow.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: 50%;
-  height: 80px;
-  width: 60px;
-}
 
 .sliders {
   position: relative;
@@ -508,23 +500,29 @@ h1 {
 }
 
 .slides:nth-child(1) .slides__inner {
-  background-image: url("../images/2.jpg");
+  background-image: url("../images/a1.png");
 }
 
 .slides:nth-child(2) .slides__inner {
-  background-image: url("../images/3.jpg");
+  background-image: url("../images/a2.png");
 }
 
 .slides:nth-child(3) .slides__inner {
-  background-image: url("../images/4.jpg");
+  background-image: url("../images/a3.png");
 }
 
 .slides:nth-child(4) .slides__inner {
-  background-image: url("../images/5.jpg");
+  background-image: url("../images/a4.png");
 }
 
 .slides:nth-child(5) .slides__inner {
-  background-image: url("../images/6.jpg");
+  background-image: url("../images/a5.png");
+}
+.slides:nth-child(6) .slides__inner {
+  background-image: url("../images/a6.png");
+}
+.slides:nth-child(7) .slides__inner {
+  background-image: url("../images/a7.png");
 }
 .nav {
     background: rgb(54, 69, 79); /* Fallback for older browsers without RGBA-support */
@@ -602,9 +600,9 @@ h1 {
   min-height: 1px;
 }
 .col-sm-2 {
-    -ms-flex: 0 0 16.666667%;
-        flex: 0 0 16.666667%;
-    max-width: 16.666667%;
+    -ms-flex: 0 0 60%;
+        flex: 0 0 60%;
+    max-width: 60% ;
   }
   .col-sm-3 {
     -ms-flex: 0 0 25%;
@@ -614,20 +612,16 @@ h1 {
   }
 
 #myFooter {
-    background-color: #3c3d41;
+    background-color: #1A1110;
     color: white;
-    padding-top: 30px;
 }
 
 #myFooter .footer-copyright {
-    background-color: #333333;
+    background-color: black;
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
-}
-
-#myFooter .row {
-    margin-bottom: 60px;
+    height: 40px;
 }
 
 #myFooter .navbar-brand {
@@ -638,19 +632,34 @@ h1 {
 #myFooter .footer-copyright p {
     margin: 10px;
     color: #ccc;
+    float: right;
+    padding-left: 8px;
 }
 
 #myFooter ul {
     list-style-type: none;
     padding-left: 0;
     line-height: 1.7;
+    margin-top: 0px;
 }
-
+#myFooter ul li{
+    float: left;
+    padding: 10px;
+}
+#myFooter ul li img{
+    height: 40px;
+    width: 40px;
+}
+#myFooter ul li #wide{
+    height: 40px;
+    width: 100px;
+}
 #myFooter h5 {
     font-size: 18px;
     color: white;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 #myFooter h2 a{
