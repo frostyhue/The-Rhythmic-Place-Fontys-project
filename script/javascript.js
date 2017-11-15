@@ -270,14 +270,23 @@ $(function () {
 
 /*navbar darker background after scroll*/
 
-window.onscroll = function() {
-    var nav = document.getElementById('nav');
-    var right = document.getElementById('right');
-    if ( window.pageYOffset > 1 ) {
-        nav.classList.add("nav");
-        right.classList.add("padding-right");
-    } else {
-        nav.classList.remove("nav");
-        right.classList.remove("padding-right");
-    }
+//window.onscroll = function() {
+//    var nav = document.getElementById('nav');
+//    var right = document.getElementById('right');
+//    if ( window.pageYOffset > 1 ) {
+//        nav.classList.add("nav");
+//        right.classList.add("padding-right");
+//    } else {
+//        nav.classList.remove("nav");
+//        right.classList.remove("padding-right");
+//    }
+//}
+
+/*menu*/
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
