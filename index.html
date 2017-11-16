@@ -12,7 +12,7 @@
       
   </head>
   <body>
-      <div id="body" class="container">
+      <div id="body" class="container" >
           <nav class="navigation" id="nav">
               <div class="fixed-corner-left"><img class="logo" src="images/logo2.png"></div>
               <div class="right" id="right">
@@ -21,16 +21,43 @@
               <div id="mySidenav" class="sidenav">
                   <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
                   <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#artists">Artists</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#join">Join</a></li>
                 <li><a href="#map">Location</a></li>
-                <li><a>Log in</a></li>
+                <li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log in</a></li>
+                  <div class="align-icons">
+                  <ul >
+                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                  </ul>
+                  </div>
 </div>
           </nav>
+          
 
 <!--          logo in the left corner-->
-         
+         <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container-form">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button class="button-form" type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me</div>
+  </form>
+</div>
 <!--    navigation-->
 <!--
     <nav class="navigation" id="nav">
@@ -38,7 +65,7 @@
         <div class="right" id="right">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#artists">artists</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#join">Join</a></li>
                 <li><a href="#map">Location</a></li>
@@ -49,20 +76,12 @@
 -->
 <!--          social media buttons-->
           
-          <div class="home-page" id="home">
-              <div class="left-bar">
-                  <ul>
-                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                      <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  </ul>
-              </div>
+          <div class="home-page" id="home" onclick="closeNav();">
           </div>
-          <div class="about-page" id="about">
+          <div class="artists-page" id="artists">
              <div class="sliders">
   <!-- slides -->
-  <div class="sliders__slides">
+  <div class="sliders__slides" onclick="closeNav();">
     <div class="slides s--active">
       <div class="slides__inner">
       </div>
@@ -104,7 +123,7 @@
 </div>
 </div>
           </div>
-          <div class="gallery-page" id="gallery">
+          <div class="gallery-page" id="gallery" onclick="closeNav();">
               <h1>Gallery</h1>
               <div class="slider">
         <div class="slide" ><img src="images/1.jpg" /><p>rutrum tellus a tempus :)</p></div>
@@ -120,22 +139,24 @@
 			</video>
 -->
               </div>
-          <div class="join-page" id="join">
+          <div class="join-page" id="join" onclick="closeNav();">
               <div class="centered-view">
               <div class="schedule">
                   <img src="images/shedule.png">
               </div>
-                  <div class="text">Are you interested? You can join the awesomeness by clicking on the button!</div>
+                  <div class="text">We have sad news for you. Music is dead, and RHYTHM IS IN! Why not discover the excitement of the science of rhythm itself at “The Rhythmic Place” the home of rhythm! Thanks to the science of rhythm you don’t need musical talent to feel the rhythm, just listen. I felt the rhythm just by moving my hips! Rhythm is the new wave! Why work hard on difficult dance moves when rhythm can make you feel better than you ever dreamed of? You would be the hit of the festival! 
+Remember, you don’t know you are a dancer until you feel the rhythm!
+</div>
               <button class="button"><a style="text-decoration: none; color: bisque;" href="form.html">JOIN NOW!</a></button>
               </div>
           </div>
-          <div class="map-page" id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d77148.90479841072!2d6.7132577!3d52.824107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7e010cfe19b33%3A0xe1bd06427483d7af!2sMolecaten+Park+Kuierpad!5e0!3m2!1sen!2snl!4v1510324790930" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="map-page" id="map" onclick="closeNav();">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d77148.90479841072!2d6.7132577!3d52.824107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7e010cfe19b33%3A0xe1bd06427483d7af!2sMolecaten+Park+Kuierpad!5e0!3m2!1sen!2snl!4v1510324790930" frameborder="0" style="border:0" allowfullscreen onclick=""></iframe>
           </div>
       
       <!--footer-->
       
-          <footer id="myFooter">
+          <footer id="myFooter" onclick="closeNav();">
         <div class="container-footer">
             <div class="row">
                 <div class="col-sm-2">
@@ -156,5 +177,6 @@
     </footer>
       <script src="script/jquery-3.2.1.min.js"></script>
       <script src="script/javascript.js"></script>
+      <script src="script/loginForm.js"></script>
   </body>
 </html>
