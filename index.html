@@ -16,7 +16,11 @@
           <nav class="navigation" id="nav">
               <div class="fixed-corner-left"><img class="logo" src="images/logo2.png"></div>
               <div class="right" id="right">
-          <span style="font-size:50px;cursor:pointer;float: right; color: aqua" onclick="openNav()">&#9776;</span>
+                  <div class="toggle-icon" onclick="openNav()">
+    <span class="bar" onclick="openNav()"></span>
+    <span class="bar" onclick="openNav()"></span>
+    <span class="bar" onclick="openNav()"></span>
+  </div><!-- /toggle-icon -->
               </div>
               <div id="mySidenav" class="sidenav">
                   <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
@@ -151,7 +155,7 @@ Remember, you don’t know you are a dancer until you feel the rhythm!
               </div>
           </div>
           <div class="map-page" id="map" onclick="closeNav();">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d77148.90479841072!2d6.7132577!3d52.824107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7e010cfe19b33%3A0xe1bd06427483d7af!2sMolecaten+Park+Kuierpad!5e0!3m2!1sen!2snl!4v1510324790930" frameborder="0" style="border:0" allowfullscreen onclick=""></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d77148.90479841072!2d6.7132577!3d52.824107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b7e010cfe19b33%3A0xe1bd06427483d7af!2sMolecaten+Park+Kuierpad!5e0!3m2!1sen!2snl!4v1510324790930" frameborder="0" style="border:0" allowfullscreen onclick="closeNav();"></iframe>
           </div>
       
       <!--footer-->
@@ -177,6 +181,5 @@ Remember, you don’t know you are a dancer until you feel the rhythm!
     </footer>
       <script src="script/jquery-3.2.1.min.js"></script>
       <script src="script/javascript.js"></script>
-      <script src="script/loginForm.js"></script>
   </body>
 </html>

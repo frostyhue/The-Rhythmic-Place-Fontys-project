@@ -2,21 +2,21 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
-* {margin: 0; padding: 0; margin-top:}
+* {margin: 0; padding: 0;}
 
 html {
 	height: 100%;
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
-	background: 
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+	background: url('../images/register.jpg');
+    background-size: cover;
+/*		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 }
 
 body {
 	font-family: montserrat, arial, verdana;
 }
-
 .back-button a{
     text-decoration: none;
     color: white;
@@ -29,7 +29,6 @@ body {
 #msform {
 	width: 400px;
 	margin: 50px auto;
-	text-align: center;
 	position: relative;
 }
 #msform fieldset {
@@ -50,7 +49,7 @@ body {
 	display: none;
 }
 /*inputs*/
-#msform input, #msform textarea, .back-button {
+#msform input, #msform textarea {
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -62,7 +61,7 @@ body {
 	font-size: 13px;
 }
 /*buttons*/
-#msform .action-button , .back-button{
+#msform .action-button {
 	width: 100px;
 	background: #27AE60;
 	font-weight: bold;
@@ -92,7 +91,6 @@ body {
 /*progressbar*/
 #progressbar {
 	margin-bottom: 30px;
-    margin-top:80px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
@@ -105,7 +103,6 @@ body {
 	width: 20%;
 	float: left;
 	position: relative;
-  text-align: center;
 }
 #progressbar li:before {
 	content: counter(step);
@@ -141,26 +138,12 @@ body {
 	color: white;
 }
 
-
-input[type="radio"] {
-    display:none;
+#msform input[type="radio"] {
+    width: auto;
+    text-align: left;
+}
+#msform .fs-title, #msform .fs-subtitle, #msform #progressbar{
+    text-align: center;
 }
 
-input[type="radio"] + label {
-    color:black;
-    font-family:Arial, sans-serif;
-}
 
-input[type="radio"] + label span {
-    display:inline-block;
-    width:19px;
-    height:19px;
-    margin:-2px 10px 0 0;
-    vertical-align:middle;
-    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
-    cursor:pointer;
-}
-
-input[type="radio"]:checked + label span {
-    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
-}
